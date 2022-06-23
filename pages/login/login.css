@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&display=swap');
+
+:root {
+    --bg: #4868B1;
+    --white: #fff;
+    --bg-black: #1b2f5f;
+}
+
+* {
+    scroll-behavior: smooth;
+    font-family: 'Playfair Display', serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* HEADER */
+
+.logo-img {
+    width: 80px;
+    height: auto;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo h1 {
+    font-size: 32px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-weight: 900;
+    margin-left: 10px;
+    color: var(--white);
+}
+
+.menu {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 10vh;
+    width: 100vw;
+    background-color: var(--bg);
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+}
+
+.nav-list li {
+    letter-spacing: 3px;
+    margin-left: 32px;
+    font-size: 20px;
+}
+
+.nav-list a {
+    color: var(--white);
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.nav-list a:hover {
+    text-decoration: underline;
+}
+
+/* FIM DO HEADER */
+
+/* Formulário Login */
+
+.box-login {
+    background: var(--bg);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 100px;
+    border-radius: 20px;
+    color: #fff;
+}
+
+.box-login h1{
+    text-align: center;
+    font-size: 30px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+input {
+    padding: 15px;
+    border: none;
+    border-radius: 10px;
+    outline: none;
+    font-size: 15px;
+}
+
+.inputsubmit {
+    background: var(--white);
+    color: var(--bg);
+    border: none;
+    padding: 15px;
+    border-radius: 10px;
+    cursor: pointer;
+    width: 100%;
+    text-transform: uppercase;
+    font-size: 20px;
+    font-weight: 900;
+    transition: all 0.4s ease-in-out;
+}
+
+.inputsubmit:hover {
+    background: #028d09;
+    color: var(--white);
+}
+
+/* FOOTER */
+
+#footer {
+    position: absolute;
+    bottom: 0;
+    height: 3vh;
+    width: 100vw;
+    background-color: var(--bg);
+}
+
+.footer-rodape {
+    text-align: center;
+    font-size: 20px;
+    color: var(--white);
+}
+
+/* FIM DO FOOTER */

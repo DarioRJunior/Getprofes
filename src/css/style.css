@@ -1,0 +1,273 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&display=swap');
+
+:root {
+    --bg: #4868B1;
+    --white: #fff;
+    --bg-black: #1b2f5f;
+}
+
+* {
+    scroll-behavior: smooth;
+    font-family: 'Playfair Display', serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* HEADER */
+
+.logo-img {
+    width: 90px;
+    height: auto;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo h1 {
+    font-size: 32px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-weight: 900;
+    margin-left: 10px;
+    color: var(--white);
+}
+
+.menu {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 12vh;
+    width: 100vw;
+    background-color: var(--bg);
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+}
+
+.nav-list li {
+    letter-spacing: 3px;
+    margin-left: 32px;
+    font-size: 20px;
+}
+
+.nav-list a {
+    color: var(--white);
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.nav-list a:hover {
+    text-decoration: underline;
+}
+
+/* FIM DO HEADER */
+
+/* SOBRE NÓS */
+#sobre-nos {
+    width: 100vw;
+    height: 20vh;
+}
+
+#sobre-nos h2 {
+    margin-top: 10px;
+    text-align: center;
+    font-size: 38px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-weight: 900;
+    margin-left: 10px;
+    color: var(--bg);
+    text-decoration: underline;
+}
+
+.sobre-container {
+    width: 900px;
+    margin: 0 auto;
+}
+
+.sobre-texto {
+    width: 670px;
+    margin: 0 auto;
+    margin-top: 10px;
+    font-size: 20px;
+    text-align: justify;
+    line-height: 26px;
+}
+
+/* FIM DE SOBRE NÓS */
+
+/* SERVIÇOS */
+
+#servicos {
+    width: 100vw;
+    height: 20vh;
+}
+
+#servicos h2 {
+    margin-top: 10px;
+    text-align: center;
+    font-size: 38px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-weight: 900;
+    margin-left: 10px;
+    color: var(--bg);
+    text-decoration: underline;
+}
+
+.servicos-container {
+    width: 900px;
+    margin: 0 auto;
+}
+
+.servicos-texto {
+    width: 670px;
+    margin: 0 auto;
+    margin-top: 10px;
+    font-size: 20px;
+    text-align: justify;
+    line-height: 26px;
+}
+
+.chamada-btns {
+    text-align: center;
+}
+
+.btns {
+    margin-top: 10px;
+    text-align: center;
+}
+
+.btn-home {
+    cursor: pointer;
+    border: none;
+    padding: 10px;
+    width: 200px;
+    background-color: var(--bg);
+    border-radius: 5px;
+    color: var(--white);
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 20px;
+    text-decoration: none;
+    margin-right: 20px;
+    transition: all 0.10s;
+}
+
+.btn-home:hover {
+    background-color: var(--bg-black);
+}
+
+/* FIM DE SERVIÇOS */
+/* FOOTER */
+
+#footer {
+    position: absolute;
+    bottom: 0;
+    height: 30vh;
+    width: 100vw;
+    background-color: var(--bg);
+}
+
+.footer-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90%;
+}
+
+.footer-header {
+    width: 300px;
+    height: 20vh;
+    text-align: center;
+}
+
+.footer-header img {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 10px;
+}
+
+.footer-header h2 {
+    font-size: 22px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-weight: 900;
+    color: var(--white);
+    margin-bottom: 10px;
+}
+
+.footer-header p {
+    font-size: 18px;
+    color: var(--white);
+}
+
+.footer-menu {
+    height: 20vh;
+    width: 300px;
+    text-align: center;
+}
+
+.footer-menu h2 {
+    font-size: 22px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-weight: 900;
+    color: var(--white);
+    margin-bottom: 20px;
+    text-decoration: underline;
+}
+
+.footer-menu li {
+    margin-bottom: 5px;
+}
+
+.footer-menu a {
+    color: var(--white);
+    font-size: 20px;
+}
+
+.footer-menu a:hover {
+    text-decoration: underline;
+}
+
+.footer-sociais {
+    height: 20vh;
+    width: 300px;
+    text-align: center;
+}
+
+.footer-sociais h2 {
+    font-size: 22px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-weight: 900;
+    color: var(--white);
+    margin-bottom: 20px;
+    text-decoration: underline;
+}
+
+.footer-sociais a {
+    color: var(--white);
+    font-size: 30px;
+    margin-right: 20px;
+}
+
+.footer-sociais a:hover {
+    opacity: 0.5;
+}
+
+.footer-rodape {
+    text-align: center;
+    font-size: 20px;
+    color: var(--white);
+}
+
+/* FIM DO FOOTER */

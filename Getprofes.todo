@@ -1,0 +1,69 @@
+Regras: 
+    ☐ Criar administradores
+    ☐ Login com sessão
+    ☐ senhas criptografadas
+    ☐ colocar mascara de CPF e não deixar cadastrar cpfs inválidos
+    ☐ Utilizar URLs amigáveis
+
+
+Home Page:
+    ✔ URL amigável @done(22-06-20 20:59)
+    ✔ Criar Logo @done(22-06-20 18:27)
+    ✔ Criar Menu (Home, Sobre nós e serviços) @done(22-06-20 20:59)
+    ✔ Criar Sobre Nós @done(22-06-20 20:59)
+    ✔ Criar Serviços (Botão para se cadastrar e Login) @done(22-06-20 20:59)
+    ✔ Criar Footer @done(22-06-20 20:59)
+
+Formulário de cadastro:
+    ☐ URL amigável
+    ✔ Criar campo de Nome @done(22-06-21 18:50)
+    ✔ Criar campo de Email @done(22-06-21 18:50)
+    ☐ Criar campo de CPF (validar)
+    ✔ Criar campo de Senha (criptografada) @done(22-06-22 16:07)
+    ✔ Selecionar o tipo de usuário (Professor ou Aluno) @done(22-06-21 18:50)
+    ✔ Botão para cadastrar @done(22-06-21 18:50)
+
+Formulário de login:
+    ☐ URL amigável
+    ✔ Criar campo de Email @done(22-06-21 18:50)
+    ✔ Criar campo de senha @done(22-06-21 18:50)
+    ✔ Botão para logar @done(22-06-21 18:50)
+
+Sistema da Administração:
+    ☐ URL amigável
+    ☐ Colocar Logo
+    ☐ Colocar Menu (Apresentar o email, Editar Perfil, Sair do sistema)
+    ☐ Colocar Footer
+    ☐ Criar Div para as funções do sistema abaixo
+    ☐ Cadastrar Disciplinas
+    ☐ Ver lista de Disciplinas (Poder editar ou Apagar)
+    ☐ Ver lista de Professores cadastrados
+    ☐ Imprimir lista de Professores
+    ☐ Exportar dados com a lista de professores
+    ☐ Ver lista de Alunos cadastrados
+    ☐ Imprimir lista de Alunos
+    ☐ Exportar dados com a lista de alunos
+
+Sistema do Professor(a):
+    ☐ URL amigável
+    ☐ Colocar Logo
+    ☐ Colocar Menu (Apresentar o Nome do professor, Editar Perfil, Sair do sistema)
+    ☐ Colocar Footer
+    ☐ Criar Div para as funções do sistema abaixo
+    ☐ Cadastrar Disciplinas que ele oferta (Selecionar a diciplina, colocar o nome do professor)
+    ☐ Ver lista de Disciplinas que ele oferta (Poder editar ou Apagar)
+    ☐ Ver lista de alunos que estão matriculados nas disciplinas que ele oferta
+    ☐ Imprimir lista de alunos que estão matriculados(Nome do aluno e disciplina)
+    ☐ 
+
+Sistema do Aluno:
+    ☐ URL amigável
+    ☐ Colocar Logo
+    ☐ Colocar Menu (Apresentar o Nome do aluno, Editar Perfil, Sair do sistema)
+    ☐ Colocar Footer
+    ☐ Mostrar a lista com todas as aulas ofertadas pelos professores, podendo filtrar entre as disciplinas
+    ☐ Limitar o número de Aulas disponiveis que serão exibidas para o Aluno
+    ☐ Ao clicar em uma disciplina redirecionar para uma página, mostrando o nome da matéria e professor
+    ☐ permitir a inscrição do aluno em uma disciplina
+    ☐ Ver lista de disciplinas que o aluno está selecionou (mostrar a quantidade de registros)
+    ☐ Imprmir lista de Disciplinas (nome da disciplina e professor)
