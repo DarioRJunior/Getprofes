@@ -34,9 +34,9 @@ Sistema da Administração:
     ✔ Colocar Logo @done(22-06-24 16:08)
     ✔ Colocar Menu (Apresentar o nome, Sair do sistema) @done(22-06-24 16:08)
     ✔ Colocar Footer @done(22-06-24 16:08)
-    ☐ Criar Div para as funções do sistema abaixo
-    ☐ Cadastrar Disciplinas
-    ☐ Ver lista de Disciplinas (Poder editar ou Apagar)
+    ✔ Criar Div para as funções do sistema abaixo @done(22-06-24 20:33)
+    ✔ Cadastrar Disciplinas @done(22-06-24 20:33)
+    ✔ Ver lista de Disciplinas (Poder editar ou Apagar) @done(22-06-24 20:33)
     ☐ Ver lista de Professores cadastrados
     ☐ Imprimir lista de Professores
     ☐ Exportar dados com a lista de professores
@@ -46,11 +46,11 @@ Sistema da Administração:
 
 Sistema do Professor(a):
     ☐ URL amigável
-    ☐ Colocar Logo
-    ☐ Colocar Menu (Apresentar o Nome do professor, Editar Perfil, Sair do sistema)
-    ☐ Colocar Footer
-    ☐ Criar Div para as funções do sistema abaixo
-    ☐ Cadastrar Disciplinas que ele oferta (Selecionar a diciplina, colocar o nome do professor)
+    ✔ Colocar Logo @done(22-06-24 20:34)
+    ✔ Colocar Menu (Apresentar o Nome do professor, Sair do sistema) @done(22-06-24 20:34)
+    ✔ Colocar Footer @done(22-06-24 20:34)
+    ✔ Criar Div para as funções do sistema abaixo @done(22-06-24 20:34)
+    ✔ Cadastrar Disciplinas que ele oferta (Selecionar a diciplina, colocar o nome do professor) @done(22-06-24 20:34)
     ☐ Ver lista de Disciplinas que ele oferta (Poder editar ou Apagar)
     ☐ Ver lista de alunos que estão matriculados nas disciplinas que ele oferta
     ☐ Imprimir lista de alunos que estão matriculados(Nome do aluno e disciplina)
