@@ -1,20 +1,20 @@
 <?php
+
 require('../../connection/verifica.php');
 
-if ($_SESSION["UsuarioNivel"] != "ADM") echo "<script>alert('Você não é Administrador!');top.location.href='../login/login.php';</script>";
-if (isset($_POST['submit'])){
+if (!empty($_GET['id'])) {
     include_once('../../connection/config.php');
-    $nome = $_POST['nome'];
+    $id = $_GET['id'];
 
-    $sql = "INSERT INTO disciplinas (nome) VALUES ('$nome')";
-    $result = mysqli_query($con, $sql);
-    
-    if ($result) {
-        echo "<script>alert('Disciplina $nome cadastrado(a) com sucesso!');</script>";
-        echo "<script>top.location.href='../sistema/sistema-adm.php';</script>";
+    $sqlSelect = "SELECT * FROM disciplinas WHERE id =$id";
+    $result = $con->query($sqlSelect);
+
+    if ($result->num_rows > 0) {
+        while ($disciplinas_data = mysqli_fetch_assoc($result)) {
+            $nome = $disciplinas_data['nome'];
+        }
     } else {
-        echo "<script>alert('Erro ao cadastrar disciplina!');</script>";
-        echo "<script>top.location.href='../sistema/sistema-adm.php';</script>";
+        header("Location: lista-disciplinas.php?pagina=1");
     }
 }
 ?>
@@ -26,8 +26,8 @@ if (isset($_POST['submit'])){
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GetProfes - Editar Disciplinas</title>
     <link rel="shortcut icon" href="../../src/img/GetProfes-Logo.png" type="image/x-icon">
-    <title>GetProfes - Cadastro de Disciplina</title>
     <link rel="stylesheet" href="../../src/css/reset.css">
     <link rel="stylesheet" href="cadastro-disciplinas.css">
 </head>
@@ -40,22 +40,23 @@ if (isset($_POST['submit'])){
                 <h1>GetProfes</h1>
             </div>
             <ul class="nav-list">
-                <li><a href="../sistema/sistema-adm.php" class="voltar">Voltar</a></li>
+                <li><a href="lista-disciplinas.php?pagina=1" class="voltar">Voltar</a></li>
             </ul>
         </nav>
     </header>
     <div class="box-cadastro">
         <div class="box">
-            <form  action="cadastro-disciplinas.php" method="POST">
-                <fieldset class="fieldset">
-                    <legend><b>Cadastrar disciplina</b></legend>
+            <form action="saveEdit.php" method="POST">
+                <fieldset>
+                    <legend><b>Editar Disciplina</b></legend>
                     <br>
                     <div class="inputBox">
-                        <input type="text" name="nome" id="nome" class="inputUser" required>
+                        <input type="text" name="nome" id="nome" value="<?php echo $nome ?>" class="inputUser" required>
                         <label for="nome" class="labelInput">Nome da disciplina:</label>
                     </div>
                     <br><br>
-                    <input type="submit" name="submit" id="submit" value="Cadastrar">
+                    <input type="hidden" name="id" value="<?php echo $id ?>">
+                    <input type="submit" name="update" id="update" value="Atualizar">
                 </fieldset>
             </form>
         </div>
@@ -67,4 +68,5 @@ if (isset($_POST['submit'])){
         </div>
     </footer>
 </body>
+
 </html>

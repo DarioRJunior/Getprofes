@@ -42,7 +42,7 @@ if ($_SESSION["UsuarioNivel"] != "ADM") echo "<script>alert('Você não é Admin
                 <div class="sistema-container">
                     <h2>O que deseja fazer?</h2>
                     <a href="../disciplinas/cadastro-disciplinas.php">Cadastrar Disciplina</a>
-                    <a href="#">Lista de Disciplina</a>
+                    <a href="../disciplinas/lista-disciplinas.php?pagina=1">Lista de Disciplina</a>
                     <a href="#">Professores cadastrados</a>
                     <a href="#">Alunos cadastrados</a>
                 </div>

@@ -50,3 +50,16 @@ VALUES
         '202cb962ac59075b964b07152d234b70',
         'Aluno'
     );
+
+-- Estrutura da tabela `diciplinas`
+CREATE TABLE IF NOT EXISTS `disciplinas` (
+    `id` int(2) NOT NULL AUTO_INCREMENT,
+    `nome` varchar(45) NOT NULL,
+    PRIMARY KEY (`id`)
+);
+
+INSERT INTO
+    `disciplinas` (`id`, `nome`)
+VALUES
+    (1, 'Historia'),
+    (2, 'Geografia');
