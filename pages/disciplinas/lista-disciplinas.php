@@ -18,6 +18,30 @@ if (isset($_GET['pagina'])) {
     $anterior = $pag - 1;
     $proximo = $pag + 1;
 }
+if(@$_REQUEST['botao']){
+    $handle = fopen("ListaDisciplinas.txt", 'a+');
+    fwrite($handle, "\n");
+    fwrite($handle, "\n");
+    fwrite($handle, "Lista de Disciplinas");
+    fwrite($handle, "\n");
+    fwrite($handle, "\n");
+    fwrite($handle, "ID - Nome");
+    fwrite($handle, "\n");
+    fwrite($handle, "\n");
+    fwrite($handle, "---------------------------------------------------------------------------------------------------------------------");
+    fwrite($handle, "\n");
+    fwrite($handle, "\n");
+    $sql = "SELECT * FROM disciplinas ORDER BY id ASC";
+    $query_disciplinas = "SELECT COUNT(id) AS qnt_disciplinas FROM disciplinas";
+    $result = mysqli_query($con, $sql);
+    while ($row = mysqli_fetch_array($result)) {
+        fwrite($handle, $row['id'] . " - " . $row['nome']);
+        fwrite($handle, "\n");
+    }
+    fclose($handle);
+    echo "<script>alert('Arquivo criado com sucesso!');</script>";
+
+}
 $result = $con->query($sql);
 ?>
 
@@ -87,43 +111,46 @@ $result = $con->query($sql);
                     ?>
                     <h3>Disciplinas cadastradas: <?php echo $row_disciplinas["qnt_disciplinas"]; ?></h3>
                 </div>
-                <button><a class="btn_relatorio" href="relatorioEstoque.php" target="_blank">Baixar relatório de disciplinas</a></button>
+                <div class="btn-baixar">
+                    <button><a class="btn_relatorio" href="relatorio-disciplinas.php" target="_blank">Baixar relatório de disciplinas</a></button>
+                    <button><a name="botao" class="btn_relatorio btn-exportar" href="relatorio-disciplinas.php" target="_blank">Exportar Dados</a></button>
+                </div>
                 <nav class="paginacao-container">
-                <ul class="pagination">
-                    <?php
-                    if ($pag > 1) {
-                    ?>
-                        <li class="page-item">
-                            <a class="page-link" href="?pagina=<?= $anterior; ?>" aria-label="Anterior">
-                                <span aria-hidden="true">Anterior</span>
-                            </a>
-                        </li>
-                    <?php } ?>
+                    <ul class="pagination">
+                        <?php
+                        if ($pag > 1) {
+                        ?>
+                            <li class="page-item">
+                                <a class="page-link" href="?pagina=<?= $anterior; ?>" aria-label="Anterior">
+                                    <span aria-hidden="true">Anterior</span>
+                                </a>
+                            </li>
+                        <?php } ?>
 
-                    <?php
-                    for ($i = 1; $i <= $tp; $i++) {
-                        if ($pag == $i) {
-                            echo "<li class='page-item active'><a class='page-link' href='?pagina=$i'>$i</a></li>";
-                        } else {
-                            echo "<li class='page-item'><a class='page-link' href='?pagina=$i'>$i</a></li>";
+                        <?php
+                        for ($i = 1; $i <= $tp; $i++) {
+                            if ($pag == $i) {
+                                echo "<li class='page-item active'><a class='page-link' href='?pagina=$i'>$i</a></li>";
+                            } else {
+                                echo "<li class='page-item'><a class='page-link' href='?pagina=$i'>$i</a></li>";
+                            }
                         }
-                    }
-                    ?>
+                        ?>
 
 
 
-                    <?php
-                    if ($pag < $tp) {
-                    ?>
-                        <li class="page-item">
-                            <a class="page-link" href="?pagina=<?= $proximo; ?>" aria-label="Próximo">
-                                <span aria-hidden="true">Próximo</span>
+                        <?php
+                        if ($pag < $tp) {
+                        ?>
+                            <li class="page-item">
+                                <a class="page-link" href="?pagina=<?= $proximo; ?>" aria-label="Próximo">
+                                    <span aria-hidden="true">Próximo</span>
 
-                            </a>
-                        </li>
-                    <?php } ?>
-                </ul>
-            </nav>
+                                </a>
+                            </li>
+                        <?php } ?>
+                    </ul>
+                </nav>
             </div>
         </div>
     </section>

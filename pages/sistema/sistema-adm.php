@@ -58,7 +58,7 @@ if ($_SESSION["UsuarioNivel"] != "ADM") echo "<script>alert('Você não é Admin
 
     <div id="modal-sair" class="modal-container">
         <div class="modal">
-            <h3 class="subtitulo">Você, Deseja sair do sistema?</h3>
+            <h3 class="subtitulo">Você deseja sair do sistema?</h3>
             <div class="btn-container">
                 <a href="../login/login.php"><button class="btn-sim">SIM</button></a>
                 <a href="sistema-adm.php"><button class="btn-nao">NÃO</button></a>
