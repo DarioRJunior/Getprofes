@@ -89,7 +89,7 @@ $result = $con->query($sql);
                 </div>
                 <div class="btn-baixar">
                     <button><a class="btn_relatorio" href="relatorio-disciplinas.php" target="_blank">Baixar relatório de disciplinas</a></button>
-                    <button><a name="botao" class="btn_relatorio btn-exportar">Exportar Dados</a></button>
+                    <button><a class="btn_relatorio" href="exportar.php">Exportar Dados</a></button>
                 </div>
                 <nav class="paginacao-container">
                     <ul class="pagination">
