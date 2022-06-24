@@ -62,4 +62,20 @@ INSERT INTO
     `disciplinas` (`id`, `nome`)
 VALUES
     (1, 'Historia'),
-    (2, 'Geografia');
+    (2, 'Geografia'),
+    (3, 'Matematica'),
+    (4, 'Fisica'),
+    (5, 'Quimica'),
+    (6, 'Biologia'),
+    (7, 'Programacao em php'),
+    (8, 'Direito Penal');
+
+-- Estrutura da tabela `diciplinas_ministradas`
+CREATE TABLE IF NOT EXISTS `disciplinas_ministradas` (
+    `id` int(2) NOT NULL AUTO_INCREMENT,
+    `id_professor` int(2) NOT NULL,
+    `nome_disciplina` varchar(45) NOT NULL,
+    `descricao` varchar(200) NOT NULL,
+    PRIMARY KEY (`id`),
+    FOREIGN KEY (`id_professor`) REFERENCES `usuarios` (`id`)
+);
