@@ -18,7 +18,7 @@ Formulário de cadastro:
     ☐ URL amigável
     ✔ Criar campo de Nome @done(22-06-21 18:50)
     ✔ Criar campo de Email @done(22-06-21 18:50)
-    ☐ Criar campo de CPF (validar)
+    ✔ Criar campo de CPF (validar) @done(22-06-23 01:46)
     ✔ Criar campo de Senha (criptografada) @done(22-06-22 16:07)
     ✔ Selecionar o tipo de usuário (Professor ou Aluno) @done(22-06-21 18:50)
     ✔ Botão para cadastrar @done(22-06-21 18:50)

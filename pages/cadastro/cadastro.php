@@ -9,14 +9,29 @@ if (isset($_POST['submit'])) {
     $senha = $_POST['senha'];
     $criptografar = md5($senha);
     $nivel = $_POST['nivel'];
-    CalculaCPF($cpf);
+    ValidarCPF($cpf);
 
-    if (CalculaCPF($cpf)) {
-        $result = mysqli_query($con, "INSERT INTO usuarios (nome, email, cpf, senha, nivel) VALUES ('$nome', '$email','$cpf', '$criptografar','$nivel')");
-        echo "CPF Válido";
+    if (ValidarCPF($cpf) == true) {
+        $sql = "INSERT INTO usuarios (nome, email, cpf, senha, nivel) VALUES ('$nome', '$email', '$cpf', '$criptografar', '$nivel')";
+        $result = mysqli_query($con, $sql);
+        if ($result) {
+            echo "<script>alert('Usuário cadastrado com sucesso!');</script>";
+            echo "<script>window.location.href = '../login/login.php';</script>";
+        } else {
+            echo "<script>alert('Erro ao cadastrar usuário!');</script>";
+            echo "<script>window.location.href = '../../index.php';</script>";
+        }
     } else {
-        echo "CPF Inválido";
+        echo "<script>alert('CPF inválido!');</script>";
+        echo "<script>window.location.href = '../../index.php';</script>";
     }
+
+    // if (CalculaCPF($cpf) == true) {
+    //     $result = mysqli_query($con, "INSERT INTO usuarios (nome, email, cpf, senha, nivel) VALUES ('$nome', '$email','$cpf', '$criptografar','$nivel')");
+    //     echo "CPF Válido";
+    // } else {
+    //     echo "CPF Inválido";
+    // }
 }
 ?>
 

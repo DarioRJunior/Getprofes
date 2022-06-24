@@ -15,6 +15,7 @@ CREATE TABLE IF NOT EXISTS `usuarios` (
     `nivel` varchar(9),
     PRIMARY KEY (`id`)
 );
+
 INSERT INTO
     `usuarios` (
         `id`,
@@ -29,7 +30,23 @@ VALUES
         1,
         'Dario Junior',
         'dario@gmail.com',
-        '021.031.499-20',
-        '123',
+        '347.774.370-94',
+        '202cb962ac59075b964b07152d234b70',
         'ADM'
+    ),
+    (
+        2,
+        'Roberto Junior',
+        'roberto@gmail.com',
+        '669.791.160-37',
+        '202cb962ac59075b964b07152d234b70',
+        'Professor'
+    ),
+    (
+        3,
+        'Maria da Silva',
+        'maria@gmail.com',
+        '633.968.890-02',
+        '202cb962ac59075b964b07152d234b70',
+        'Aluno'
     );
