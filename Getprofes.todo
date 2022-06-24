@@ -2,7 +2,7 @@ Regras:
     ☐ Criar administradores
     ☐ Login com sessão
     ☐ senhas criptografadas
-    ☐ colocar mascara de CPF e não deixar cadastrar cpfs inválidos
+    ✔ colocar mascara de CPF e não deixar cadastrar cpfs inválidos @done(22-06-24 16:32)
     ☐ Utilizar URLs amigáveis
 
 

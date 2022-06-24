@@ -32,8 +32,8 @@ if ($_SESSION["UsuarioNivel"] != "ADM") echo "<script>alert('Você não é Admin
     </header>
 
     <div id="bem-vindo">
-    <p>SISTEMA DA ADMINISTRAÇÃO</p>
-    <P>Bem-vindo, <?php echo $_SESSION["nome"]; ?></P>
+        <p>SISTEMA DA ADMINISTRAÇÃO</p>
+        <P>Bem-vindo, <?php echo $_SESSION["nome"]; ?></P>
     </div>
 
     <main>
@@ -41,7 +41,7 @@ if ($_SESSION["UsuarioNivel"] != "ADM") echo "<script>alert('Você não é Admin
             <div class="sistema-box">
                 <div class="sistema-container">
                     <h2>O que deseja fazer?</h2>
-                    <a href="#">Cadastrar Disciplina</a>
+                    <a href="../disciplinas/cadastro-disciplinas.php">Cadastrar Disciplina</a>
                     <a href="#">Lista de Disciplina</a>
                     <a href="#">Professores cadastrados</a>
                     <a href="#">Alunos cadastrados</a>
@@ -62,18 +62,18 @@ if ($_SESSION["UsuarioNivel"] != "ADM") echo "<script>alert('Você não é Admin
             <div class="btn-container">
                 <a href="../login/login.php"><button class="btn-sim">SIM</button></a>
                 <a href="sistema-adm.php"><button class="btn-nao">NÃO</button></a>
-                
+
             </div>
         </div>
     </div>
 </body>
 
 <script>
-    function iniciaModal(modalID){
+    function iniciaModal(modalID) {
         const modal = document.getElementById(modalID);
         modal.classList.add('mostrar');
         modal.addEventListener('click', (e) => {
-            if(e.target.id == modalID || e.target.classList.contains('btn-nao')){
+            if (e.target.id == modalID || e.target.classList.contains('btn-nao')) {
                 modal.classList.remove('mostrar');
             }
         });
@@ -81,4 +81,5 @@ if ($_SESSION["UsuarioNivel"] != "ADM") echo "<script>alert('Você não é Admin
     const sair = document.querySelector('.sair');
     sair.addEventListener('click', () => iniciaModal('modal-sair'));
 </script>
+
 </html>
