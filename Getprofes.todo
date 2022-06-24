@@ -31,9 +31,9 @@ Formulário de login:
 
 Sistema da Administração:
     ☐ URL amigável
-    ☐ Colocar Logo
-    ☐ Colocar Menu (Apresentar o email, Editar Perfil, Sair do sistema)
-    ☐ Colocar Footer
+    ✔ Colocar Logo @done(22-06-24 16:08)
+    ✔ Colocar Menu (Apresentar o nome, Sair do sistema) @done(22-06-24 16:08)
+    ✔ Colocar Footer @done(22-06-24 16:08)
     ☐ Criar Div para as funções do sistema abaixo
     ☐ Cadastrar Disciplinas
     ☐ Ver lista de Disciplinas (Poder editar ou Apagar)
