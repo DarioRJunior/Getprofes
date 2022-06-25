@@ -1,7 +1,7 @@
 Regras: 
-    ☐ Criar administradores
-    ☐ Login com sessão
-    ☐ senhas criptografadas
+    ✔ Criar administradores @done(22-06-25 14:02)
+    ✔ Login com sessão @done(22-06-25 14:02)
+    ✔ senhas criptografadas @done(22-06-25 14:02)
     ✔ colocar mascara de CPF e não deixar cadastrar cpfs inválidos @done(22-06-24 16:32)
     ☐ Utilizar URLs amigáveis
 
