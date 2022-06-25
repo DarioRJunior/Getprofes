@@ -25,13 +25,6 @@ if (isset($_POST['submit'])) {
         echo "<script>alert('CPF inválido!');</script>";
         echo "<script>window.location.href = '../../index.php';</script>";
     }
-
-    // if (CalculaCPF($cpf) == true) {
-    //     $result = mysqli_query($con, "INSERT INTO usuarios (nome, email, cpf, senha, nivel) VALUES ('$nome', '$email','$cpf', '$criptografar','$nivel')");
-    //     echo "CPF Válido";
-    // } else {
-    //     echo "CPF Inválido";
-    // }
 }
 ?>
 
