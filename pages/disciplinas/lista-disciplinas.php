@@ -130,7 +130,6 @@ $result = $con->query($sql);
             </div>
         </div>
     </section>
-    </main>
 
     <footer id="footer">
         <div class="footer-rodape">

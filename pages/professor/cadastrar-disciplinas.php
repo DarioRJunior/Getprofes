@@ -5,10 +5,11 @@ include_once('../../connection/config.php');
 if (isset($_POST['submit'])) {
     include_once('../../connection/config.php');
     $id_professor = $_SESSION['id_usuario'];
+    $nome_professor = $_SESSION['nome'];
     $nome_disciplina = $_POST['select_disciplina'];
     $descricao = $_POST['descricao'];
 
-    $sql = "INSERT INTO disciplinas_ministradas (id_professor, nome_disciplina, descricao) VALUES ('$id_professor', '$nome_disciplina', '$descricao')";
+    $sql = "INSERT INTO disciplinas_ministradas (id_professor, nome_professor, nome_disciplina, descricao) VALUES ('$id_professor','$nome_professor' ,'$nome_disciplina', '$descricao')";
     $result = mysqli_query($con, $sql);
     if ($result) {
         echo "<script>alert('Disciplina $nome_disciplina cadastrada com sucesso!');</script>";

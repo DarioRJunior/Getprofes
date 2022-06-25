@@ -74,6 +74,7 @@ VALUES
 CREATE TABLE IF NOT EXISTS `disciplinas_ministradas` (
     `id` int(2) NOT NULL AUTO_INCREMENT,
     `id_professor` int(2) NOT NULL,
+    `nome_professor` varchar(45) NOT NULL,
     `nome_disciplina` varchar(45) NOT NULL,
     `descricao` varchar(200) NOT NULL,
     PRIMARY KEY (`id`),
