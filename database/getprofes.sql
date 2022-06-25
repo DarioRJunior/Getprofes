@@ -138,8 +138,8 @@ VALUES
         2,
         'Maria da Silva',
         'Roberto Junior',
-        'Historia',
-        'Historia da humanidade',
+        'Geografia',
+        'Geografia da humanidade',
         'Aguardando'
     ),
     (
@@ -150,7 +150,7 @@ VALUES
         'Roberto Junior',
         'Geografia',
         'Geografia da humanidade',
-        'Aguardando'
+        'Rejeitado'
     );
 
 CREATE TABLE IF NOT EXISTS `aulas` (
@@ -166,3 +166,26 @@ CREATE TABLE IF NOT EXISTS `aulas` (
     FOREIGN KEY (`id_aluno`) REFERENCES `usuarios` (`id`),
     FOREIGN KEY (`id_professor`) REFERENCES `usuarios` (`id`)
 );
+
+INSERT INTO
+    `aulas` (
+        `id`,
+        `id_aluno`,
+        `id_professor`,
+        `nome_aluno`,
+        `nome_professor`,
+        `nome_disciplina`,
+        `descricao`,
+        `status_solicitacao`
+    )
+VALUES
+    (
+        1,
+        3,
+        2,
+        'Maria da Silva',
+        'Roberto Junior',
+        'Historia',
+        'Historia da humanidade',
+        'Aprovado'
+    );
