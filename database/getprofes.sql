@@ -80,3 +80,39 @@ CREATE TABLE IF NOT EXISTS `disciplinas_ministradas` (
     PRIMARY KEY (`id`),
     FOREIGN KEY (`id_professor`) REFERENCES `usuarios` (`id`)
 );
+
+INSERT INTO
+    `disciplinas_ministradas` (
+        `id`,
+        `id_professor`,
+        `nome_professor`,
+        `nome_disciplina`,
+        `descricao`
+    )
+VALUES
+    (
+        1,
+        2,
+        'Roberto Junior',
+        'Historia',
+        'Historia da humanidade'
+    ),
+    (
+        2,
+        2,
+        'Roberto Junior',
+        'Geografia',
+        'Geografia da humanidade'
+    );
+
+-- Estrutura da tabela `solicitacoes`
+CREATE TABLE IF NOT EXISTS `solicitacoes` (
+    `id` int(2) NOT NULL AUTO_INCREMENT,
+    `id_aluno` int(2) NOT NULL,
+    `nome_professor` varchar(45) NOT NULL,
+    `nome_disciplina` varchar(45) NOT NULL,
+    `descricao` varchar(200) NOT NULL,
+    `status_solicitacao` varchar(9) NOT NULL,
+    PRIMARY KEY (`id`),
+    FOREIGN KEY (`id_aluno`) REFERENCES `usuarios` (`id`)
+);

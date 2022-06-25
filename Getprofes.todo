@@ -51,19 +51,18 @@ Sistema do Professor(a):
     ✔ Colocar Footer @done(22-06-24 20:34)
     ✔ Criar Div para as funções do sistema abaixo @done(22-06-24 20:34)
     ✔ Cadastrar Disciplinas que ele oferta (Selecionar a diciplina, colocar o nome do professor) @done(22-06-24 20:34)
-    ☐ Ver lista de Disciplinas que ele oferta (Poder editar ou Apagar)
+    ✔ Ver lista de Disciplinas que ele oferta (Poder editar ou Apagar) @done(22-06-24 22:03)
     ☐ Ver lista de alunos que estão matriculados nas disciplinas que ele oferta
     ☐ Imprimir lista de alunos que estão matriculados(Nome do aluno e disciplina)
     ☐ 
 
 Sistema do Aluno:
     ☐ URL amigável
-    ☐ Colocar Logo
-    ☐ Colocar Menu (Apresentar o Nome do aluno, Editar Perfil, Sair do sistema)
-    ☐ Colocar Footer
+    ✔ Colocar Logo @done(22-06-24 22:03)
+    ✔ Colocar Menu (Apresentar o Nome do aluno, Editar Perfil, Sair do sistema) @done(22-06-24 22:03)
+    ✔ Colocar Footer @done(22-06-24 22:03)
     ☐ Mostrar a lista com todas as aulas ofertadas pelos professores, podendo filtrar entre as disciplinas
-    ☐ Limitar o número de Aulas disponiveis que serão exibidas para o Aluno
-    ☐ Ao clicar em uma disciplina redirecionar para uma página, mostrando o nome da matéria e professor
+    ✔ Limitar o número de Aulas disponiveis que serão exibidas para o Aluno @done(22-06-24 22:03)
     ☐ permitir a inscrição do aluno em uma disciplina
     ☐ Ver lista de disciplinas que o aluno está selecionou (mostrar a quantidade de registros)
     ☐ Imprmir lista de Disciplinas (nome da disciplina e professor)
