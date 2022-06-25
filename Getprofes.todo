@@ -61,7 +61,7 @@ Sistema do Aluno:
     ✔ Colocar Logo @done(22-06-24 22:03)
     ✔ Colocar Menu (Apresentar o Nome do aluno, Editar Perfil, Sair do sistema) @done(22-06-24 22:03)
     ✔ Colocar Footer @done(22-06-24 22:03)
-    ☐ Mostrar a lista com todas as aulas ofertadas pelos professores, podendo filtrar entre as disciplinas
+    ✔ Mostrar a lista com todas as aulas ofertadas pelos professores, podendo filtrar entre as disciplinas @done(22-06-25 18:40)
     ✔ Limitar o número de Aulas disponiveis que serão exibidas para o Aluno @done(22-06-24 22:03)
     ✔ permitir a inscrição do aluno em uma disciplina @done(22-06-25 01:57)
     ✔ Ver lista de disciplinas que o aluno está selecionado (mostrar a quantidade de registros) @done(22-06-25 01:57)
