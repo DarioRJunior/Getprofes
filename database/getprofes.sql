@@ -112,7 +112,7 @@ CREATE TABLE IF NOT EXISTS `solicitacoes` (
     `nome_professor` varchar(45) NOT NULL,
     `nome_disciplina` varchar(45) NOT NULL,
     `descricao` varchar(200) NOT NULL,
-    `status_solicitacao` varchar(9) NOT NULL,
+    `status_solicitacao` varchar(15) NOT NULL,
     PRIMARY KEY (`id`),
     FOREIGN KEY (`id_aluno`) REFERENCES `usuarios` (`id`)
 );

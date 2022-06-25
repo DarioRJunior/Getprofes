@@ -63,6 +63,6 @@ Sistema do Aluno:
     ✔ Colocar Footer @done(22-06-24 22:03)
     ☐ Mostrar a lista com todas as aulas ofertadas pelos professores, podendo filtrar entre as disciplinas
     ✔ Limitar o número de Aulas disponiveis que serão exibidas para o Aluno @done(22-06-24 22:03)
-    ☐ permitir a inscrição do aluno em uma disciplina
-    ☐ Ver lista de disciplinas que o aluno está selecionou (mostrar a quantidade de registros)
+    ✔ permitir a inscrição do aluno em uma disciplina @done(22-06-25 01:57)
+    ✔ Ver lista de disciplinas que o aluno está selecionado (mostrar a quantidade de registros) @done(22-06-25 01:57)
     ☐ Imprmir lista de Disciplinas (nome da disciplina e professor)

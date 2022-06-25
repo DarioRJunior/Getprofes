@@ -14,7 +14,7 @@ if (!empty($_GET['id'])) {
         $nome_disciplina = $row["nome_disciplina"];
         $descricao = $row["descricao"];
         
-        $sqlSolicitacao = "INSERT INTO solicitacoes (id_aluno, nome_professor, nome_disciplina, descricao, status_solicitacao) VALUES ('" . $_SESSION['id_usuario'] . "', '$nome_professor', '$nome_disciplina', '$descricao', 'Pendente')";
+        $sqlSolicitacao = "INSERT INTO solicitacoes (id_aluno, nome_professor, nome_disciplina, descricao, status_solicitacao) VALUES ('" . $_SESSION['id_usuario'] . "', '$nome_professor', '$nome_disciplina', '$descricao', 'Aguardando')";
         $resultSolicitacao = $con->query($sqlSolicitacao);
     }
 
