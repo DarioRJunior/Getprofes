@@ -41,7 +41,7 @@ if ($_SESSION["UsuarioNivel"] != "Aluno") echo "<script>alert('Você não é Adm
             <div class="sistema-box">
                 <div class="sistema-container">
                     <h2>O que deseja fazer?</h2>
-                    <a href="#">Solicitar aulas</a>
+                    <a href="../aluno/solicitar-aula.php?pagina=1">Solicitar aulas</a>
                     <a href="#">Minhas solicitações</a>
                     <a href="#">Minhas aulas</a>
                 </div>

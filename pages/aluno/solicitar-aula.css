@@ -1,0 +1,255 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&display=swap');
+
+:root {
+    --bg: #4868B1;
+    --white: #fff;
+    --bg-black: #1b2f5f;
+    --red: #ff0000;
+    --black-red: #660606;
+}
+
+* {
+    scroll-behavior: smooth;
+    font-family: 'Playfair Display', serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* HEADER */
+header {
+    margin-bottom: 40px;
+}
+
+.logo-img {
+    width: 90px;
+    height: auto;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo h1 {
+    font-size: 32px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-weight: 900;
+    margin-left: 10px;
+    color: var(--white);
+}
+
+.menu {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 12vh;
+    width: 100vw;
+    background-color: var(--bg);
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+}
+
+.nav-list li {
+    letter-spacing: 3px;
+    margin-left: 32px;
+    font-size: 20px;
+}
+
+.nav-list a {
+    color: var(--white);
+    font-weight: bold;
+    text-transform: uppercase;
+    background-color: var(--bg-black);
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.nav-list a:hover {
+    text-decoration: underline;
+}
+
+/* FIM DO HEADER */
+
+/* LISTA DISCIPLINAS */
+.sistema {
+    display: flex;
+    justify-content: space-around;
+    width: 940px;
+    margin: 0 auto;
+    color: var(--bg-black);
+    align-items: center;
+}
+
+.sistema-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 940px;
+    padding: 10px;
+}
+
+.sistema-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid var(--bg);
+    width: 800px;
+    padding: 20px;
+}
+
+.sistema-container h2 {
+    font-size: 32px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-weight: 900;
+    margin-left: 10px;
+    color: var(--bg-black);
+}
+
+.table-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.table {
+    border: 1px solid var(--bg);
+    width: 700px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.table th {
+    border: 1px solid var(--bg);
+    padding: 10px;
+    font-size: 20px;
+    font-weight: 900;
+    text-transform: uppercase;
+}
+
+.table td {
+    border: 1px solid var(--bg);
+    padding: 10px;
+    font-size: 20px;
+}
+
+.btns {
+    width: 100px;
+}
+
+.btnEditar {
+    background-color: var(--bg);
+    color: var(--white);
+    padding: 6px;
+    border-radius: 5px;
+}
+
+.btnEditar:hover {
+    background-color: var(--bg-black);
+}
+
+.btnSolicitar {
+    background-color: var(--bg-black);
+    color: var(--white);
+    padding: 6px;
+    border-radius: 5px;
+}
+
+.btnSolicitar:hover {
+    background-color: var(--bg);
+}
+
+.total-container {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+.total-container h3{
+    font-size: 20px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-weight: 900;
+    margin-left: 10px;
+    color: var(--bg-black);
+}
+
+.btn_relatorio {
+    color: var(--white);
+    background-color: var(--bg);
+    border-radius: 10px;
+    padding: 10px;
+    text-transform: uppercase;
+    transform: all 0.3s ease-in-out;
+}
+
+.btn_relatorio:hover {
+    color: var(--white);
+    background-color: var(--bg-black);
+}
+
+button {
+    border: none;
+}
+
+/* FIM LISTA DISCIPLINAS */
+
+/* PAGINAÇÃO */
+.paginacao-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.page-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10px;
+}
+
+.page-link {
+    color: var(--bg-black);
+    font-size: 20px;
+    text-decoration: none;
+}
+
+.active {
+    border: 1px solid var(--bg);
+    border-radius: 5px;
+    width: 30px;
+}
+/* PAGINAÇÃO */
+
+
+/* FOOTER */
+
+#footer {
+    position: absolute;
+    bottom: 0;
+    height: 3vh;
+    width: 100vw;
+    background-color: var(--bg);
+}
+
+.footer-rodape {
+    text-align: center;
+    font-size: 20px;
+    color: var(--white);
+}
+
+/* FIM DO FOOTER */
