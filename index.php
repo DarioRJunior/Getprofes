@@ -23,7 +23,7 @@ routesURL();
                 <h1>GetProfes</h1>
             </div>
             <ul class="nav-list">
-                <li><a href="home">Página Inicial</a></li>
+                <li><a href="index.php">Página Inicial</a></li>
                 <li><a href="#sobre-nos">Sobre nós</a></li>
                 <li><a href="#servicos">Serviços</a></li>
             </ul>

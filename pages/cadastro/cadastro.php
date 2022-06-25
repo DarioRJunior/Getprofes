@@ -57,7 +57,7 @@ if (isset($_POST['submit'])) {
                 <h1>GetProfes</h1>
             </div>
             <ul class="nav-list">
-                <li><a href="../../index.html">Página Inicial</a></li>
+                <li><a href="../../index.php">Página Inicial</a></li>
             </ul>
         </nav>
     </header>
