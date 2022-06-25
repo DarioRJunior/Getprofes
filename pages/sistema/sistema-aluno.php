@@ -1,7 +1,7 @@
 <?php
 require('../../connection/verifica.php');
 
-if ($_SESSION["UsuarioNivel"] != "Aluno") echo "<script>alert('Você não é Administrador!');top.location.href='../login/login.php';</script>";
+if ($_SESSION["UsuarioNivel"] != "Aluno") echo "<script>alert('Você não é Aluno!');top.location.href='../login/login.php';</script>";
 
 ?>
 
@@ -43,7 +43,7 @@ if ($_SESSION["UsuarioNivel"] != "Aluno") echo "<script>alert('Você não é Adm
                     <h2>O que deseja fazer?</h2>
                     <a href="../aluno/solicitar-aula.php?pagina=1">Solicitar aulas</a>
                     <a href="../aluno/minhas-solicitacoes.php?pagina=1">Minhas solicitações</a>
-                    <a href="#">Minhas aulas</a>
+                    <a href="../aluno/minhas-aulas.php?pagina=1">Minhas aulas</a>
                 </div>
             </div>
         </section>

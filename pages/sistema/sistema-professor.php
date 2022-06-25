@@ -1,7 +1,7 @@
 <?php
 require('../../connection/verifica.php');
 
-if ($_SESSION["UsuarioNivel"] != "Professor") echo "<script>alert('Você não é Administrador!');top.location.href='../login/login.php';</script>";
+if ($_SESSION["UsuarioNivel"] != "Professor") echo "<script>alert('Você não é Professor!');top.location.href='../login/login.php';</script>";
 
 ?>
 
