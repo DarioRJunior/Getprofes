@@ -32,7 +32,7 @@ $result = $con->query($sql);
                 <h1>GetProfes</h1>
             </div>
             <ul class="nav-list">
-                <li><a href="../sistema/sistema-aluno.php" class="voltar">Voltar</a></li>
+                <li><a href="../aluno/solicitar-aula.php?pagina=1" class="voltar">Voltar</a></li>
             </ul>
         </nav>
     </header>
@@ -40,11 +40,7 @@ $result = $con->query($sql);
     <section class="sistema">
         <div class="sistema-box">
             <div class="form-pesquisar">
-                <a href="solicitar-aula.php?pagina=1"><button>Ver lista completa</button></a>
-                <form action="pesquisar.php" method="GET">
-                    <input type="text" name="pesquisa" placeholder="Pesquisar...">
-                    <button type="submit">Pesquisar</button>
-                </form>
+                <a href="solicitar-aula.php?pagina=1"><button class="btn-lista">Ver lista completa</button></a>
             </div>
             <div class="sistema-container">
                 <h2>Aulas Disponíveis</h2>

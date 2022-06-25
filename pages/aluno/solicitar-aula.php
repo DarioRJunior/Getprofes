@@ -51,8 +51,8 @@ $result = $con->query($sql);
         <div class="sistema-box">
             <div class="form-pesquisar">
                 <form action="pesquisar.php" method="GET">
-                    <input type="text" name="pesquisa" placeholder="Pesquisar...">
-                    <button type="submit">Pesquisar</button>
+                    <input class="inputPesquisa" type="text" name="pesquisa" placeholder="Nome da Disciplina..." required>
+                    <button class="btn-pesquisar" type="submit">Pesquisar</button>
                 </form>
             </div>
             <div class="sistema-container">
