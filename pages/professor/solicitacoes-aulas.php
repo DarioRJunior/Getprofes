@@ -1,16 +1,16 @@
 <?php
+
 include_once '../../connection/config.php';
 require('../../connection/verifica.php');
 
-
-$sql = "SELECT * FROM disciplinas_ministradas";
-$query_disciplinas = "SELECT COUNT(id) AS qnt_disciplinas FROM disciplinas_ministradas";
+$sql = "SELECT * FROM solicitacoes WHERE id_professor = '" . $_SESSION['id_usuario'] . "'";
+$query_solicitacoes = "SELECT COUNT(id) AS qnt_solicitacoes FROM solicitacoes WHERE id_professor = '" . $_SESSION['id_usuario'] . "'";
 
 if (isset($_GET['pagina'])) {
     $pag = $_GET['pagina'];
-    $busca = "SELECT * FROM disciplinas_ministradas";
+    $busca = "SELECT * FROM solicitacoes WHERE id_professor = '" . $_SESSION['id_usuario'] . "'";
     $todos = mysqli_query($con, $busca);
-    $registros = "5";
+    $registros = "10";
     $tr = mysqli_num_rows($todos);
     $tp = ceil($tr / $registros);
     $inicio = ($registros * $pag) - $registros;
@@ -22,6 +22,7 @@ $result = $con->query($sql);
 
 ?>
 
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -29,10 +30,10 @@ $result = $con->query($sql);
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GetProfes - Solicitar Aulas</title>
+    <title>GetProfes - Minhas Solicitacoes</title>
     <link rel="shortcut icon" href="../../src/img/GetProfes-Logo.png" type="image/x-icon">
     <link rel="stylesheet" href="../../src/css/reset.css">
-    <link rel="stylesheet" href="solicitar-aula.css">
+    <link rel="stylesheet" href="solicitacoes-aulas.css">
 </head>
 
 <body>
@@ -43,48 +44,33 @@ $result = $con->query($sql);
                 <h1>GetProfes</h1>
             </div>
             <ul class="nav-list">
-                <li><a href="../sistema/sistema-aluno.php" class="voltar">Voltar</a></li>
+                <li><a href="../sistema/sistema-professor.php" class="voltar">Voltar</a></li>
             </ul>
         </nav>
     </header>
 
     <section class="sistema">
         <div class="sistema-box">
-            <div class="form-pesquisar">
-                <form action="pesquisar.php" method="GET">
-                    <input class="inputPesquisa" type="text" name="pesquisa" placeholder="Nome da Disciplina..." required>
-                    <button class="btn-pesquisar" type="submit">Pesquisar</button>
-                </form>
-            </div>
             <div class="sistema-container">
-                <h2>Aulas Disponíveis</h2>
-                <div class="form-ordenação">
-                    <form action="ordenar.php" method="GET">
-                        <input class="btn-ordenar" type="submit" name="alfabetica" value="Ordenar por ordem alfabética">
-                    </form>
-                </div>
+                <h2>Minhas Solicitações</h2>
                 <div class="table-container">
                     <table class="table">
                         <thead>
                             <tr>
+                                <th scope="col">Aluno</th>
                                 <th scope="col">Disciplina</th>
                                 <th scope="col">Descrição</th>
-                                <th scope="col">Professor</th>
-                                <th scope="col"></th>
+                                <th scope="col">Status</th>
                             </tr>
                         </thead>
                         <tbody>
                             <?php
                             while ($row = mysqli_fetch_assoc($limite)) {
                                 echo "<tr>";
+                                echo "<td>" . $row["nome_aluno"] . "</td>";
                                 echo "<td>" . $row["nome_disciplina"] . "</td>";
                                 echo "<td>" . $row["descricao"] . "</td>";
-                                echo "<td>Prof. " . $row["nome_professor"] . "</td>";
-                                echo "<td class='btns'>
-                                <a class='btnSolicitar' href='solicitar.php?id=$row[id]' title='Solicitar'>
-                                Solicitar
-                                </a>
-                                </td>";
+                                echo "<td>" . $row["status_solicitacao"] . "</td>";
                                 echo "</tr>";
                             }
                             ?>
@@ -93,10 +79,10 @@ $result = $con->query($sql);
                 </div>
                 <div class="total-container">
                     <?php
-                    $result_disciplinas = $con->query($query_disciplinas);
-                    $row_disciplinas = mysqli_fetch_assoc($result_disciplinas);
+                    $result_solicitacoes = $con->query($query_solicitacoes);
+                    $row_solicitacoes = mysqli_fetch_assoc($result_solicitacoes);
                     ?>
-                    <h3>Todas as aulas disponíveis: <?php echo $row_disciplinas["qnt_disciplinas"]; ?></h3>
+                    <h3>Disciplinas cadastradas: <?php echo $row_solicitacoes["qnt_solicitacoes"]; ?></h3>
                 </div>
                 <nav class="paginacao-container">
                     <ul class="pagination">

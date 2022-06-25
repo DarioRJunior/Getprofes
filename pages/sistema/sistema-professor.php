@@ -43,7 +43,7 @@ if ($_SESSION["UsuarioNivel"] != "Professor") echo "<script>alert('Você não é
                     <h2>O que deseja fazer?</h2>
                     <a href="../professor/cadastrar-disciplinas.php">Cadastrar disciplinas para ministrar</a>
                     <a href="../professor/minhas-disciplinas.php?pagina=1">Minhas disciplinas</a>
-                    <a href="#">Solicitações de aulas</a>
+                    <a href="../professor/solicitacoes-aulas.php?pagina=1">Solicitações de aulas</a>
                     <a href="#">Meus alunos</a>
                 </div>
             </div>
