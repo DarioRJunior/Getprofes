@@ -3,12 +3,12 @@
 include_once '../../connection/config.php';
 require('../../connection/verifica.php');
 
-$sql = "SELECT * FROM solicitacoes WHERE id_professor = '" . $_SESSION['id_usuario'] . "'";
-$query_solicitacoes = "SELECT COUNT(id) AS qnt_solicitacoes FROM solicitacoes WHERE id_professor = '" . $_SESSION['id_usuario'] . "'";
+$sql = "SELECT * FROM solicitacoes WHERE id_professor = '" . $_SESSION['id_usuario'] . "' AND status_solicitacao = 'Aguardando'";
+$query_solicitacoes = "SELECT COUNT(id) AS qnt_solicitacoes FROM solicitacoes WHERE id_professor = '" . $_SESSION['id_usuario'] . "' AND status_solicitacao = 'Aguardando'";
 
 if (isset($_GET['pagina'])) {
     $pag = $_GET['pagina'];
-    $busca = "SELECT * FROM solicitacoes WHERE id_professor = '" . $_SESSION['id_usuario'] . "'";
+    $busca = "SELECT * FROM solicitacoes WHERE id_professor = '" . $_SESSION['id_usuario'] . "' AND status_solicitacao = 'Aguardando'";
     $todos = mysqli_query($con, $busca);
     $registros = "10";
     $tr = mysqli_num_rows($todos);

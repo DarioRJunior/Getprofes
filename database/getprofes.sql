@@ -119,3 +119,50 @@ CREATE TABLE IF NOT EXISTS `solicitacoes` (
     FOREIGN KEY (`id_aluno`) REFERENCES `usuarios` (`id`),
     FOREIGN KEY (`id_professor`) REFERENCES `usuarios` (`id`)
 );
+
+INSERT INTO
+    `solicitacoes` (
+        `id`,
+        `id_aluno`,
+        `id_professor`,
+        `nome_aluno`,
+        `nome_professor`,
+        `nome_disciplina`,
+        `descricao`,
+        `status_solicitacao`
+    )
+VALUES
+    (
+        1,
+        3,
+        2,
+        'Maria da Silva',
+        'Roberto Junior',
+        'Historia',
+        'Historia da humanidade',
+        'Aguardando'
+    ),
+    (
+        2,
+        3,
+        2,
+        'Maria da Silva',
+        'Roberto Junior',
+        'Geografia',
+        'Geografia da humanidade',
+        'Aguardando'
+    );
+
+CREATE TABLE IF NOT EXISTS `aulas` (
+    `id` int(2) NOT NULL AUTO_INCREMENT,
+    `id_aluno` int(2) NOT NULL,
+    `id_professor` int(2) NOT NULL,
+    `nome_aluno` varchar(45) NOT NULL,
+    `nome_professor` varchar(45) NOT NULL,
+    `nome_disciplina` varchar(45) NOT NULL,
+    `descricao` varchar(200) NOT NULL,
+    `status_solicitacao` varchar(15) NOT NULL,
+    PRIMARY KEY (`id`),
+    FOREIGN KEY (`id_aluno`) REFERENCES `usuarios` (`id`),
+    FOREIGN KEY (`id_professor`) REFERENCES `usuarios` (`id`)
+);
