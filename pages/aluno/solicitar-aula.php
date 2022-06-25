@@ -70,7 +70,7 @@ $result = $con->query($sql);
                                 echo "<td>" . $row["descricao"] . "</td>";
                                 echo "<td>Prof. " . $row["nome_professor"] . "</td>";
                                 echo "<td class='btns'>
-                                <a class='btnSolicitar' href='solicitar.php' title='Solicitar'>
+                                <a class='btnSolicitar' href='solicitar.php?id=$row[id]' title='Solicitar'>
                                 Solicitar
                                 </a>
                                 </td>";

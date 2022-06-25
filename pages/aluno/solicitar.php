@@ -2,24 +2,24 @@
 include_once '../../connection/config.php';
 require('../../connection/verifica.php');
 
+if (!empty($_GET['id'])) {
+    include_once '../../connection/config.php';
+    $id = $_GET['id'];
 
-$sql = "SELECT * FROM disciplinas_ministradas";
-$result = $con->query($sql);
+    $sqlSelect = "SELECT * FROM disciplinas_ministradas WHERE id = $id";
+    $result = $con->query($sqlSelect);
 
-
-while ($row = $result->fetch_assoc()) {
-    $nome_professor = $row['nome_professor'];
-    $nome_disciplina = $row['nome_disciplina'];
-    $descricao = $row['descricao'];
-    $id_aluno  = $_SESSION['id_usuario'];
-    
-    $sql_solicitacoes = "INSERT INTO solicitacoes (id_aluno, nome_professor, nome_disciplina, descricao, status_solicitacao) VALUES ('$id_aluno', '$nome_professor', '$nome_disciplina', '$descricao', 'Pendente')";
-    $result_solicitacoes = $con->query($sql_solicitacoes);
-
-    if ($result_solicitacoes) {
-        echo "<script>alert('Solicitação enviada com sucesso!');</script>";
-    } else {
-        echo "<script>alert('Erro ao enviar solicitação!');</script>";
+   while ($row = mysqli_fetch_assoc($result)) {
+        $nome_professor = $row["nome_professor"];
+        $nome_disciplina = $row["nome_disciplina"];
+        $descricao = $row["descricao"];
+        
+        $sqlSolicitacao = "INSERT INTO solicitacoes (id_aluno, nome_professor, nome_disciplina, descricao, status_solicitacao) VALUES ('" . $_SESSION['id_usuario'] . "', '$nome_professor', '$nome_disciplina', '$descricao', 'Pendente')";
+        $resultSolicitacao = $con->query($sqlSolicitacao);
     }
 }
-
+if ($result) {
+    header("Location: minhas-solicitacoes.php?pagina=1");
+} else {
+    echo "Erro ao solicitar disciplina";
+}

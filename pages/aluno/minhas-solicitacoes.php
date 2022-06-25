@@ -10,7 +10,7 @@ if (isset($_GET['pagina'])) {
     $pag = $_GET['pagina'];
     $busca = "SELECT * FROM solicitacoes WHERE id_aluno = '" . $_SESSION['id_usuario'] . "'";
     $todos = mysqli_query($con, $busca);
-    $registros = "5";
+    $registros = "10";
     $tr = mysqli_num_rows($todos);
     $tp = ceil($tr / $registros);
     $inicio = ($registros * $pag) - $registros;
