@@ -109,10 +109,12 @@ VALUES
 CREATE TABLE IF NOT EXISTS `solicitacoes` (
     `id` int(2) NOT NULL AUTO_INCREMENT,
     `id_aluno` int(2) NOT NULL,
+    `id_professor` int(2) NOT NULL,
     `nome_professor` varchar(45) NOT NULL,
     `nome_disciplina` varchar(45) NOT NULL,
     `descricao` varchar(200) NOT NULL,
     `status_solicitacao` varchar(15) NOT NULL,
     PRIMARY KEY (`id`),
-    FOREIGN KEY (`id_aluno`) REFERENCES `usuarios` (`id`)
+    FOREIGN KEY (`id_aluno`) REFERENCES `usuarios` (`id`),
+    FOREIGN KEY (`id_professor`) REFERENCES `usuarios` (`id`)
 );
