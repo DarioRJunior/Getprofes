@@ -6,6 +6,7 @@
     --bg-black: #1b2f5f;
     --red: #ff0000;
     --black-red: #660606;
+    --green: #047c04;
 }
 
 * {
@@ -172,7 +173,8 @@ header {
     flex-direction: column;
     margin-bottom: 20px;
 }
-.total-container h3{
+
+.total-container h3 {
     font-size: 20px;
     text-transform: uppercase;
     letter-spacing: 4px;
@@ -193,6 +195,27 @@ header {
 .btn_relatorio:hover {
     color: var(--white);
     background-color: var(--bg-black);
+}
+
+.btns_relatorio {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.btnAprovar {
+    background-color: var(--green);
+    color: var(--white);
+    padding: 5px;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+.btnRejeitar {
+    background-color: var(--red);
+    color: var(--white);
+    padding: 6px;
+    border-radius: 5px;
 }
 
 button {
@@ -233,6 +256,7 @@ button {
     border-radius: 5px;
     width: 30px;
 }
+
 /* PAGINAÇÃO */
 
 
