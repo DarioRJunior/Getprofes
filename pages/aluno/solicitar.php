@@ -17,9 +17,11 @@ if (!empty($_GET['id'])) {
         $sqlSolicitacao = "INSERT INTO solicitacoes (id_aluno, nome_professor, nome_disciplina, descricao, status_solicitacao) VALUES ('" . $_SESSION['id_usuario'] . "', '$nome_professor', '$nome_disciplina', '$descricao', 'Pendente')";
         $resultSolicitacao = $con->query($sqlSolicitacao);
     }
-}
-if ($result) {
-    header("Location: minhas-solicitacoes.php?pagina=1");
-} else {
-    echo "Erro ao solicitar disciplina";
+
+    if ($resultSolicitacao) {
+        echo "<script>alert('Solicitação de $nome_disciplina enviada com sucesso!');</script>";
+        echo "<script>top.location.href='../aluno/minhas-solicitacoes.php?pagina=1';</script>";
+    } else {
+        echo "Erro ao enviar solicitação";
+    }
 }
