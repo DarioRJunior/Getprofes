@@ -2,7 +2,7 @@
 include('../../connection/config.php');
 require('../../connection/verifica.php');
 
-$arquivo = "lista-aulas.txt";
+$arquivo = "Minhas-Aulas.txt";
 $arq = fopen($arquivo, "w");
 $result = mysqli_query($con, "SELECT * FROM aulas WHERE id_professor = '" . $_SESSION['id_usuario'] . "' ORDER BY id ASC");
 
@@ -14,9 +14,11 @@ while($escrever = mysqli_fetch_array($result)){
 }
 fclose($arq);
 
-if($result){
-    echo "<script>alert('Arquivo criado com sucesso!');</script>";
-    echo "<script>top.location.href='meus-alunos.php?pagina=1';</script>";
-} else {
-    echo "Erro ao criar arquivo";
-}
+header("Cache-Control: public");
+header("Content-Description: File Transfer");
+header("Content-Length: ". filesize("$arquivo").";");
+header("Content-Disposition: attachment; filename=$arquivo");
+header("Content-Type: application/octet-stream; "); 
+header("Content-Transfer-Encoding: binary");
+
+readfile($arquivo);
